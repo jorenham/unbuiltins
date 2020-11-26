@@ -9,5 +9,6 @@ pre-commit
 pytest
 pytest-cov
 hypothesis
+typeguard
 
 -e .

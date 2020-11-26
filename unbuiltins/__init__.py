@@ -1,2 +1,1 @@
-def dummy():
-    return True
+from .missing import Missable, Missing  # noqa: F401
