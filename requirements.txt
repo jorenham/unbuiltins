@@ -8,5 +8,6 @@ pre-commit
 
 pytest
 pytest-cov
+hypothesis
 
 -e .
