@@ -7,7 +7,7 @@ T = TypeVar("T")
 
 
 @final
-class MissingEnum(enum.Enum):
+class MissingType(enum.Enum):
     # workaround to make type annotation recognize Missing as a singleton
     #  see https://github.com/python/typing/issues/236
     __slots__ = ()
@@ -24,9 +24,9 @@ class MissingEnum(enum.Enum):
 
 
 # Missing: Final[MissingType] = MissingType()
-Missing = MissingEnum.MISSING
+Missing = MissingType.MISSING
 
-Missable = Union[T, MissingEnum]
+Missable = Union[T, MissingType]
 Missable.__doc__ = """
 Missable type, analogous to typing.Optional.
 
