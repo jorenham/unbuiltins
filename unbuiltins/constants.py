@@ -1,7 +1,7 @@
 __all__ = ["Missing", "Missable"]
 
 import enum
-from typing import TypeVar, Union, final
+from typing import Literal, TypeVar, Union, final
 
 T = TypeVar("T")
 
@@ -12,7 +12,7 @@ class MissingType(enum.Enum):
     #  see https://github.com/python/typing/issues/236
     __slots__ = ()
 
-    MISSING = object()
+    MISSING = 0
 
     def __bool__(self):
         return False
@@ -24,9 +24,9 @@ class MissingType(enum.Enum):
 
 
 # Missing: Final[MissingType] = MissingType()
-Missing = MissingType.MISSING
+Missing: Literal[MissingType.MISSING] = MissingType.MISSING
 
-Missable = Union[T, MissingType]
+Missable = Union[T, Literal[MissingType.MISSING]]
 Missable.__doc__ = """
 Missable type, analogous to typing.Optional.
 
