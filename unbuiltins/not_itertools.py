@@ -29,9 +29,7 @@ def filternone(iterable: Iterable[Optional[T]], /) -> Iterable[T]:
     """
     filternone(iterable)
 
-    Return those items of iterable for which function(item) is false.
-
-    If function is None, return the items that are false.
+    Return those items of iterable that are not None.
     """
     return (i for i in iterable if i is not None)
 
