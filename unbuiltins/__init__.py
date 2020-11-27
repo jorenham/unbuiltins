@@ -1,2 +1,3 @@
 from .constants import Missable, Missing  # noqa: F401
-from .functions import first, optional_set  # noqa: F401
+from .not_collections import frozendict  # noqa: F401
+from .not_itertools import either, filternone, first  # noqa: F401
