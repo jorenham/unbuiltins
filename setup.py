@@ -26,6 +26,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     install_requires=[],
     packages=find_packages(exclude=["tests"]),
+    include_package_data=True,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     classifiers=[
